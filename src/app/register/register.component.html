@@ -1,0 +1,149 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gijgo/1.9.13/combined/css/gijgo.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/slicknav.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<form id="signup-form" class="wrapper">
+  <div class="form-div">
+    <h1 class="caption">Sign Up</h1>
+
+    <div class="row">
+      <div class="input-area">
+        <div class="block">
+          <label for="first-name">FIRST NAME<span class="required">*</span></label>
+          <div class="input-field">
+            <input type="text" placeholder="First Name" id="first-name" required>
+          </div>
+        </div>
+      </div>
+      <div class="input-area">
+        <div class="block">
+          <label for="district">DISTRICT</label>
+          <div class="input-field">
+            <select name="district" id="district" class="minimal" onchange="setTown()" required>
+              <option value="">Select District</option>
+              <option value="Ampara">Ampara</option>
+              <option value="Anuradhapura">Anuradhapura</option>
+              <option value="Badulla">Badulla</option>
+              <option value="Batticaloa">Batticaloa</option>
+              <option value="Colombo">Colombo</option>
+              <option value="Galle">Galle</option>
+              <option value="Gampaha">Gampaha</option>
+              <option value="Hambantota">Hambantota</option>
+              <option value="Jaffna">Jaffna</option>
+              <option value="Kalutara">Kalutara</option>
+              <option value="Kandy">Kandy</option>
+              <option value="Kegalle">Kegalle</option>
+              <option value="Kilinochchi">Kilinochchi</option>
+              <option value="Kurunegala">Kurunegala</option>
+              <option value="Mannar">Mannar</option>
+              <option value="Matale">Matale</option>
+              <option value="Matara">Matara</option>
+              <option value="Moneragala">Moneragala</option>
+              <option value="Mullaitivu">Mullaitivu</option>
+              <option value="Nuwara Eliya">Nuwara Eliya</option>
+              <option value="Polonnaruwa">Polonnaruwa</option>
+              <option value="Puttalam">Puttalam</option>
+              <option value="Ratnapura">Ratnapura</option>
+              <option value="Trincomalee">Trincomalee</option>
+              <option value="Vavuniya">Vavuniya</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-area">
+        <div class="block">
+          <label for="last-name">LAST NAME<span class="required">*</span></label>
+          <div class="input-field">
+            <input type="text" placeholder="Last Name" id="last-name" required>
+          </div>
+        </div>
+      </div>
+
+      <div class="input-area">
+        <div class="block">
+          <label for="town">TOWN</label>
+          <div class="input-field">
+            <select name="town" id="town" class="minimal" required>
+              <option value="">Select a district</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-area">
+        <div class="block">
+          <label for="password">PASSWORD<span class="required">*</span></label>
+          <div class="input-field">
+            <input type="password" placeholder="Password" id="password" required>
+            <i class="fa" id="passeye" onmouseover="ShowPass()" onmouseout="HidePass()">&#xf06e;</i>
+          </div>
+        </div>
+      </div>
+      <div class="input-area">
+        <div class="block">
+          <label for="confirm-password">CONFIRM PASSWORD<span class="required">*</span></label>
+          <div class="input-field">
+            <input type="password" placeholder="Confirm Password" id="confirm-password" required>
+            <i class="fa" id="cpasseye" onmouseover="ShowcPass()" onmouseout="HidecPass()">&#xf06e;</i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-area">
+        <div class="block">
+          <label for="email">EMAIL<span class="required">*</span></label>
+          <div class="input-field">
+            <input type="text" placeholder="Email" id="email" required>
+          </div>
+        </div>
+      </div>
+      <div class="input-area">
+        <div class="block">
+          <label for="user-name">Username<span class="required">*</span></label>
+          <div class="input-field">
+            <input type="text" placeholder="Username" id="user-name" required>
+          </div>
+        </div>
+      </div>
+      <div class="input-area">
+        <div class="block">
+          <label for="businesstype">CATEGORY</label>
+          <div class="input-field" id="businesstype">
+            <div class="checkboxes">
+              <input type="checkbox" name="photo-editing" id="photo-editing">Photo editing<br>
+              <input type="checkbox" name="video-editing" id="video-editing">Video editing<br>
+              <input type="checkbox" name="logo-designing" id="logo-designing">Logo designing<br>
+              <input type="checkbox" name="interior-design" id="interior-design">Architecture and interior design<br>
+              <input type="checkbox" name="print-designs" id="print-designs">Print designs<br>
+              <input type="checkbox" name="graphic-arts" id="graphic-arts">Graphic arts<br>
+              <input type="checkbox" name="art-and-illustration" id="art-and-illustration">Art & illustration<br>
+              <input type="checkbox" name="photography" id="photography">Photography
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br>
+    <div class="row">
+      <input type="submit" value="Sign up" class="button button1">
+    </div>
+  </div>
+</form>

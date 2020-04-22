@@ -1,0 +1,244 @@
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap);
+
+html {
+  height: 100%;
+  /*Image only BG fallback*/
+
+  /*background = gradient + image pattern combo*/
+  /* background:
+        linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6)); */
+}
+
+.wrapper {
+  background-image: url("../../assets/img/cover/bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6{text-align: center;}
+
+input[type=text], input[type=password], select{
+  padding: 10px;
+  border: solid 2px rgba(128, 128, 128, 0.6);
+  border-radius: 5px;
+  width: 20vw;
+  transition: 0.1s;
+  font-size: 15px;
+  background-color: transparent;
+  position: relative;
+}
+.checkboxes{
+  width: 20vw;
+  font-size: 15px;
+}
+input[type=text]:focus, input[type=password]:focus, select:focus{
+  border-color: #4CAF50;
+}
+label{
+  font-weight: 700;
+  font-size: 12px;
+
+}
+select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+select.minimal {
+  background-image:
+    linear-gradient(45deg, transparent 50%, gray 50%),
+    linear-gradient(135deg, gray 50%, transparent 50%),
+    linear-gradient(to right, #ccc, #ccc);
+  background-position:
+    calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px),
+    calc(100% - 2.5em) 0.5em;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1px 1.5em;
+  background-repeat: no-repeat;
+}
+
+select.minimal:focus {
+  background-image:
+    linear-gradient(45deg, green 50%, transparent 50%),
+    linear-gradient(135deg, transparent 50%, green 50%),
+    linear-gradient(to right, #ccc, #ccc);
+  background-position:
+    calc(100% - 15px) 1em,
+    calc(100% - 20px) 1em,
+    calc(100% - 2.5em) 0.5em;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1px 1.5em;
+  background-repeat: no-repeat;
+  outline: 0;
+}
+
+
+
+.caption{font-size: 40px;}
+
+.input-field{
+  margin-top: 5px;
+}
+.form-div{
+  color: black;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 50%;
+  padding: 10px;
+  margin-left: auto;
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  border-radius:8px;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.2s;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button1 {
+  background-color: transparent;
+  color: black;
+  border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+.input-area{
+  display: block;
+  width: 50%;
+  margin-bottom: 20PX;
+  margin-left: auto;
+  margin-right: auto;
+}
+.block{
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+.row{
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+}
+
+.note{
+  font-size: 13px;
+  width: 80%;
+  margin: auto;
+}
+
+.required{
+  color:red;
+  font-size:15px;
+}
+
+#passeye{
+  /* position: absolute; */
+  cursor: pointer;
+  /* top:62.6%;
+  right: 29%; */
+  font-size:20px;
+  color: rgba(128, 128, 128, 0.6);
+}
+#passeye:hover{
+  color: #4CAF50;
+}
+#cpasseye{
+  /* position: absolute; */
+  cursor: pointer;
+  /* top:79%;
+  right: 29%; */
+  font-size:20px;
+  color: rgba(128, 128, 128, 0.6);
+}
+#cpasseye:hover{
+  color: #4CAF50;
+}
+#password, #confirm-password{
+  width: 18.2vw;
+}
+
+
+
+
+@media only screen and (max-width:768px){
+  body{
+    background-position: top;
+  }
+
+  .form-div{
+    color: black;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 80%;
+    padding: 10px;
+    padding-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  input[type=text], input[type=password], select{
+    padding: 10px;
+    border: solid 2px rgba(128, 128, 128, 0.6);
+    border-radius: 5px;
+    width: 100%;
+    transition: 0.1s;
+    font-size: 15px;
+    background-color: transparent;
+  }
+  .checkboxes{
+    width: 100%;
+  }
+  #password, #confirm-password{
+    width: 93%;
+  }
+
+  .input-area{
+    display: block;
+    width: 100%;
+    margin-bottom: 20PX;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .row{
+    width: 100%;
+    display: inline-table;
+    align-items: center;
+  }
+
+  .button{
+    margin-left: 65%;
+  }
+
+  .note{
+    font-size: 13px;
+    width: 90%;
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  .block{
+    width: auto;
+  }
+}

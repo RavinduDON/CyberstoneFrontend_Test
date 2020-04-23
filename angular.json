@@ -89,7 +89,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/scss/_where_to_go.scss"
             ],
             "scripts": []
           }

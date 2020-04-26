@@ -15,7 +15,6 @@ import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { CategoryComponent } from './category/category.component';
 import { ContactComponent } from './contact/contact.component';
-import {MaterialModule} from "./material/material.module";
 
 @NgModule({
   declarations: [
@@ -36,7 +35,6 @@ import {MaterialModule} from "./material/material.module";
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
-    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,79 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+.gallery{
+    width: calc(100%-10px);
+    padding: 5px;
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template: "1fr 1fr 1fr 1fr" 22vw
+                   "1fr 1fr 1fr 1fr" 22vw
+                   "1fr 1fr 1fr 1fr" 22vw
+                   "1fr 1fr 1fr 1fr" 22vw
+                   "1fr 1fr 1fr 1fr" 22vw
+                   "1fr 1fr 1fr 1fr" 22vw
+                   "1fr 1fr 1fr 1fr" 22vw
+                   "1fr 1fr 1fr 1fr" 22vw;
+    grid-gap: 5px;               
+}
+.gallery .box{
+    position: relative;
+    background: #ccc; 
+}
+.gallery .box img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.2s;
+}
+.gallery .box img:hover{
+    transform: scale(1.02);
+}
+.gallery .box.a{
+    grid-row: span 2;
+}
+.gallery .box.b,
+.gallery .box.f,
+.gallery .box.h,
+.gallery .box.j{ 
+    grid-column: span 2;    
+}
+
+
+@media only screen and (max-width:768px){
+
+    .gallery{
+        width: calc(100%-10px);
+        padding: 5px;
+        display: grid;
+        grid-auto-flow: dense;
+        grid-template: "1fr" 40vw
+                       "1fr" 40vw
+                       "1fr" 40vw
+                       "1fr" 40vw
+                       "1fr" 40vw
+                       "1fr" 40vw
+                       "1fr" 40vw
+                       "1fr" 40vw
+                       "1fr" 40vw
+                       "1fr" 40vw
+                       "1fr" 40vw
+                       "1fr" 40vw
+                       "1fr" 40vw
+                       "1fr" 40vw
+                       "1fr" 40vw
+                       "1fr" 40vw;
+        grid-gap: 5px;               
+    }
+
+    .gallery .box.b,
+    .gallery .box.f,
+    .gallery .box.h,
+    .gallery .box.j{ 
+        grid-column: span 0;    
+    }
+}

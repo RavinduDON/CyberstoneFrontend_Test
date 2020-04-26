@@ -33,16 +33,19 @@
 <form action="index.html">
 
   <div class="">
-    <div class="item"><img src="../../assets/profile/img/hero/hero-1.jpg" alt=""></div>
+    <div class="cover-photo">
+      <img src="../../assets/profile/img/hero/hero-1.jpg" alt="">
+      <a href="" class="edit-cover-photo"><span class="icon_pencil-edit_alt"></span>&nbsp;Edit</a>
+    </div>
   </div>
   <!-- Hero Section End -->
 
   <!-- Services Section Begin -->
-  <div class="">
+  <div class="services-section spad">
     <div class="container">
       <div class="row">
         <div class="col-lg-4 col-md-6 col-sm-6">
-          <div class="item">
+          <div class="services-item">
             <img src="../../assets/profile/img/services/service-3.jpg" alt="">
           </div>
         </div>
@@ -67,16 +70,16 @@
                 <div class="col-lg-12">
                   <div class="filter-controls">
                     <ul>
-                      <li  onclick="showabout()" class="active">About</li>
-                      <li  onclick="showpp()">Packages & Prices</li>
+                      <li (click) = "isAbout=true" class="active">About</li>
+                      <li (click) = "isAbout=false">Packages & Prices</li>
                     </ul>
                   </div>
                 </div>
               </div>
             </div>
             <div class="edit-abt-and-des">
-              <textarea name="about" id="about" cols="70" rows="10" maxlength="1000">Your current about.</textarea>
-              <textarea name="description" id="description" cols="70" rows="10" maxlength="1000">Your current description.</textarea>
+              <textarea name="about" id="about" cols="70" rows="10" maxlength="1000" *ngIf="isAbout">Your current about.</textarea>
+              <textarea name="description" id="description" cols="70" rows="10" maxlength="1000" *ngIf="!isAbout">Your current description.</textarea>
             </div>
           </div>
         </div>
@@ -103,21 +106,15 @@
       <div class="tabs">
         <ul class="nav nav-pills" role="tablist">
           <li class="nav-item">
-            <a class="nav-link active" data-toggle="pill" href="#tab1">Photo editing</a></li>
+            <a class="nav-link active" data-toggle="pill" href="#tab1">Graphic designing</a></li>
           <li class="nav-item">
             <a class="nav-link" data-toggle="pill" href="#tab2">Video editing</a></li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="pill" href="#tab3">Logo designing</a></li>
+            <a class="nav-link" data-toggle="pill" href="#tab3">3D modeling and architecture</a></li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="pill" href="#tab4">Architecture and interior design</a></li>
+            <a class="nav-link" data-toggle="pill" href="#tab4">paintings</a></li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="pill" href="#tab5">Print designs</a></li>
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="pill" href="#tab6">Graphic arts</a></li>
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="pill" href="#tab7">Art & illustration</a></li>
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="pill" href="#tab8">Photography</a></li>
+            <a class="nav-link" data-toggle="pill" href="#tab5">Photography</a></li>
         </ul>
       </div>
     </div>
@@ -509,238 +506,99 @@
             <input type="file" class="edit-gallery" accept="image/*" onchange="readURL(this,60+14)">
           </div>
         </div>
-        <div class="gallery container tab-pane fade" id="tab6">
-          <div class="gal-item">
-            <img src="#" alt="" class="img"><br>
-            <button class="gal-edit-button">Edit</button> | <button class="gal-delete-button" onclick="remove(75+0)">Delete</button>
-            <input type="file" class="edit-gallery" accept="image/*" onchange="readURL(this,75+0)">
-          </div>
-          <div class="gal-item">
-            <img src="#" alt="" class="img"><br>
-            <button class="gal-edit-button">Edit</button> | <button class="gal-delete-button" onclick="remove(75+1)">Delete</button>
-            <input type="file" class="edit-gallery" accept="image/*" onchange="readURL(this,75+1)">
-          </div>
-          <div class="gal-item">
-            <img src="#" alt="" class="img"><br>
-            <button class="gal-edit-button">Edit</button> | <button class="gal-delete-button" onclick="remove(75+2)">Delete</button>
-            <input type="file" class="edit-gallery" accept="image/*" onchange="readURL(this,75+2)">
-          </div>
-          <div class="gal-item">
-            <img src="#" alt="" class="img"><br>
-            <button class="gal-edit-button">Edit</button> | <button class="gal-delete-button" onclick="remove(75+3)">Delete</button>
-            <input type="file" class="edit-gallery" accept="image/*" onchange="readURL(this,75+3)">
-          </div>
-          <div class="gal-item">
-            <img src="#" alt="" class="img"><br>
-            <button class="gal-edit-button">Edit</button> | <button class="gal-delete-button" onclick="remove(75+4)">Delete</button>
-            <input type="file" class="edit-gallery" accept="image/*" onchange="readURL(this,75+4)">
-          </div>
-          <div class="gal-item">
-            <img src="#" alt="" class="img"><br>
-            <button class="gal-edit-button">Edit</button> | <button class="gal-delete-button" onclick="remove(75+5)">Delete</button>
-            <input type="file" class="edit-gallery" accept="image/*" onchange="readURL(this,75+5)">
-          </div>
-          <div class="gal-item">
-            <img src="#" alt="" class="img"><br>
-            <button class="gal-edit-button">Edit</button> | <button class="gal-delete-button" onclick="remove(75+6)">Delete</button>
-            <input type="file" class="edit-gallery" accept="image/*" onchange="readURL(this,75+6)">
-          </div>
-          <div class="gal-item">
-            <img src="#" alt="" class="img"><br>
-            <button class="gal-edit-button">Edit</button> | <button class="gal-delete-button" onclick="remove(75+7)">Delete</button>
-            <input type="file" class="edit-gallery" accept="image/*" onchange="readURL(this,75+7)">
-          </div>
-          <div class="gal-item">
-            <img src="#" alt="" class="img"><br>
-            <button class="gal-edit-button">Edit</button> | <button class="gal-delete-button" onclick="remove(75+8)">Delete</button>
-            <input type="file" class="edit-gallery" accept="image/*" onchange="readURL(this,75+8)">
-          </div>
-          <div class="gal-item">
-            <img src="#" alt="" class="img"><br>
-            <button class="gal-edit-button">Edit</button> | <button class="gal-delete-button" onclick="remove(75+9)">Delete</button>
-            <input type="file" class="edit-gallery" accept="image/*" onchange="readURL(this,75+9)">
-          </div>
-          <div class="gal-item">
-            <img src="#" alt="" class="img"><br>
-            <button class="gal-edit-button">Edit</button> | <button class="gal-delete-button" onclick="remove(75+10)">Delete</button>
-            <input type="file" class="edit-gallery" accept="image/*" onchange="readURL(this,75+10)">
-          </div>
-          <div class="gal-item">
-            <img src="#" alt="" class="img"><br>
-            <button class="gal-edit-button">Edit</button> | <button class="gal-delete-button" onclick="remove(75+11)">Delete</button>
-            <input type="file" class="edit-gallery" accept="image/*" onchange="readURL(this,75+11)">
-          </div>
-          <div class="gal-item">
-            <img src="#" alt="" class="img"><br>
-            <button class="gal-edit-button">Edit</button> | <button class="gal-delete-button" onclick="remove(75+12)">Delete</button>
-            <input type="file" class="edit-gallery" accept="image/*" onchange="readURL(this,75+12)">
-          </div>
-          <div class="gal-item">
-            <img src="#" alt="" class="img"><br>
-            <button class="gal-edit-button">Edit</button> | <button class="gal-delete-button" onclick="remove(75+13)">Delete</button>
-            <input type="file" class="edit-gallery" accept="image/*" onchange="readURL(this,75+13)">
-          </div>
-          <div class="gal-item">
-            <img src="#" alt="" class="img"><br>
-            <button class="gal-edit-button">Edit</button> | <button class="gal-delete-button" onclick="remove(75+14)">Delete</button>
-            <input type="file" class="edit-gallery" accept="image/*" onchange="readURL(this,75+14)">
-          </div>
-        </div>
-        <div class="gallery container tab-pane fade" id="tab7">
-          <div class="gal-item">
-            <img src="#" alt="" class="img"><br>
-            <button class="gal-edit-button">Edit</button> | <button class="gal-delete-button" onclick="remove(90+0)">Delete</button>
-            <input type="file" class="edit-gallery" accept="image/*" onchange="readURL(this,90+0)">
-          </div>
-          <div class="gal-item">
-            <img src="#" alt="" class="img"><br>
-            <button class="gal-edit-button">Edit</button> | <button class="gal-delete-button" onclick="remove(90+1)">Delete</button>
-            <input type="file" class="edit-gallery" accept="image/*" onchange="readURL(this,90+1)">
-          </div>
-          <div class="gal-item">
-            <img src="#" alt="" class="img"><br>
-            <button class="gal-edit-button">Edit</button> | <button class="gal-delete-button" onclick="remove(90+2)">Delete</button>
-            <input type="file" class="edit-gallery" accept="image/*" onchange="readURL(this,90+2)">
-          </div>
-          <div class="gal-item">
-            <img src="#" alt="" class="img"><br>
-            <button class="gal-edit-button">Edit</button> | <button class="gal-delete-button" onclick="remove(90+3)">Delete</button>
-            <input type="file" class="edit-gallery" accept="image/*" onchange="readURL(this,90+3)">
-          </div>
-          <div class="gal-item">
-            <img src="#" alt="" class="img"><br>
-            <button class="gal-edit-button">Edit</button> | <button class="gal-delete-button" onclick="remove(90+4)">Delete</button>
-            <input type="file" class="edit-gallery" accept="image/*" onchange="readURL(this,90+4)">
-          </div>
-          <div class="gal-item">
-            <img src="#" alt="" class="img"><br>
-            <button class="gal-edit-button">Edit</button> | <button class="gal-delete-button" onclick="remove(90+5)">Delete</button>
-            <input type="file" class="edit-gallery" accept="image/*" onchange="readURL(this,90+5)">
-          </div>
-          <div class="gal-item">
-            <img src="#" alt="" class="img"><br>
-            <button class="gal-edit-button">Edit</button> | <button class="gal-delete-button" onclick="remove(90+6)">Delete</button>
-            <input type="file" class="edit-gallery" accept="image/*" onchange="readURL(this,90+6)">
-          </div>
-          <div class="gal-item">
-            <img src="#" alt="" class="img"><br>
-            <button class="gal-edit-button">Edit</button> | <button class="gal-delete-button" onclick="remove(90+7)">Delete</button>
-            <input type="file" class="edit-gallery" accept="image/*" onchange="readURL(this,90+7)">
-          </div>
-          <div class="gal-item">
-            <img src="#" alt="" class="img"><br>
-            <button class="gal-edit-button">Edit</button> | <button class="gal-delete-button" onclick="remove(90+8)">Delete</button>
-            <input type="file" class="edit-gallery" accept="image/*" onchange="readURL(this,90+8)">
-          </div>
-          <div class="gal-item">
-            <img src="#" alt="" class="img"><br>
-            <button class="gal-edit-button">Edit</button> | <button class="gal-delete-button" onclick="remove(90+9)">Delete</button>
-            <input type="file" class="edit-gallery" accept="image/*" onchange="readURL(this,90+9)">
-          </div>
-          <div class="gal-item">
-            <img src="#" alt="" class="img"><br>
-            <button class="gal-edit-button">Edit</button> | <button class="gal-delete-button" onclick="remove(90+10)">Delete</button>
-            <input type="file" class="edit-gallery" accept="image/*" onchange="readURL(this,90+10)">
-          </div>
-          <div class="gal-item">
-            <img src="#" alt="" class="img"><br>
-            <button class="gal-edit-button">Edit</button> | <button class="gal-delete-button" onclick="remove(90+11)">Delete</button>
-            <input type="file" class="edit-gallery" accept="image/*" onchange="readURL(this,90+11)">
-          </div>
-          <div class="gal-item">
-            <img src="#" alt="" class="img"><br>
-            <button class="gal-edit-button">Edit</button> | <button class="gal-delete-button" onclick="remove(90+12)">Delete</button>
-            <input type="file" class="edit-gallery" accept="image/*" onchange="readURL(this,90+12)">
-          </div>
-          <div class="gal-item">
-            <img src="#" alt="" class="img"><br>
-            <button class="gal-edit-button">Edit</button> | <button class="gal-delete-button" onclick="remove(90+13)">Delete</button>
-            <input type="file" class="edit-gallery" accept="image/*" onchange="readURL(this,90+13)">
-          </div>
-          <div class="gal-item">
-            <img src="#" alt="" class="img"><br>
-            <button class="gal-edit-button">Edit</button> | <button class="gal-delete-button" onclick="remove(90+14)">Delete</button>
-            <input type="file" class="edit-gallery" accept="image/*" onchange="readURL(this,90+14)">
-          </div>
-        </div>
-        <div class="gallery container tab-pane fade" id="tab8">
-          <div class="gal-item">
-            <img src="#" alt="" class="img"><br>
-            <button class="gal-edit-button">Edit</button> | <button class="gal-delete-button" onclick="remove(105+0)">Delete</button>
-            <input type="file" class="edit-gallery" accept="image/*" onchange="readURL(this,105+0)">
-          </div>
-          <div class="gal-item">
-            <img src="#" alt="" class="img"><br>
-            <button class="gal-edit-button">Edit</button> | <button class="gal-delete-button" onclick="remove(105+1)">Delete</button>
-            <input type="file" class="edit-gallery" accept="image/*" onchange="readURL(this,105+1)">
-          </div>
-          <div class="gal-item">
-            <img src="#" alt="" class="img"><br>
-            <button class="gal-edit-button">Edit</button> | <button class="gal-delete-button" onclick="remove(105+2)">Delete</button>
-            <input type="file" class="edit-gallery" accept="image/*" onchange="readURL(this,105+2)">
-          </div>
-          <div class="gal-item">
-            <img src="#" alt="" class="img"><br>
-            <button class="gal-edit-button">Edit</button> | <button class="gal-delete-button" onclick="remove(105+3)">Delete</button>
-            <input type="file" class="edit-gallery" accept="image/*" onchange="readURL(this,105+3)">
-          </div>
-          <div class="gal-item">
-            <img src="#" alt="" class="img"><br>
-            <button class="gal-edit-button">Edit</button> | <button class="gal-delete-button" onclick="remove(105+4)">Delete</button>
-            <input type="file" class="edit-gallery" accept="image/*" onchange="readURL(this,105+4)">
-          </div>
-          <div class="gal-item">
-            <img src="#" alt="" class="img"><br>
-            <button class="gal-edit-button">Edit</button> | <button class="gal-delete-button" onclick="remove(105+5)">Delete</button>
-            <input type="file" class="edit-gallery" accept="image/*" onchange="readURL(this,105+5)">
-          </div>
-          <div class="gal-item">
-            <img src="#" alt="" class="img"><br>
-            <button class="gal-edit-button">Edit</button> | <button class="gal-delete-button" onclick="remove(105+6)">Delete</button>
-            <input type="file" class="edit-gallery" accept="image/*" onchange="readURL(this,105+6)">
-          </div>
-          <div class="gal-item">
-            <img src="#" alt="" class="img"><br>
-            <button class="gal-edit-button">Edit</button> | <button class="gal-delete-button" onclick="remove(105+7)">Delete</button>
-            <input type="file" class="edit-gallery" accept="image/*" onchange="readURL(this,105+7)">
-          </div>
-          <div class="gal-item">
-            <img src="#" alt="" class="img"><br>
-            <button class="gal-edit-button">Edit</button> | <button class="gal-delete-button" onclick="remove(105+8)">Delete</button>
-            <input type="file" class="edit-gallery" accept="image/*" onchange="readURL(this,105+8)">
-          </div>
-          <div class="gal-item">
-            <img src="#" alt="" class="img"><br>
-            <button class="gal-edit-button">Edit</button> | <button class="gal-delete-button" onclick="remove(105+9)">Delete</button>
-            <input type="file" class="edit-gallery" accept="image/*" onchange="readURL(this,105+9)">
-          </div>
-          <div class="gal-item">
-            <img src="#" alt="" class="img"><br>
-            <button class="gal-edit-button">Edit</button> | <button class="gal-delete-button" onclick="remove(105+10)">Delete</button>
-            <input type="file" class="edit-gallery" accept="image/*" onchange="readURL(this,105+10)">
-          </div>
-          <div class="gal-item">
-            <img src="#" alt="" class="img"><br>
-            <button class="gal-edit-button">Edit</button> | <button class="gal-delete-button" onclick="remove(105+11)">Delete</button>
-            <input type="file" class="edit-gallery" accept="image/*" onchange="readURL(this,105+11)">
-          </div>
-          <div class="gal-item">
-            <img src="#" alt="" class="img"><br>
-            <button class="gal-edit-button">Edit</button> | <button class="gal-delete-button" onclick="remove(105+12)">Delete</button>
-            <input type="file" class="edit-gallery" accept="image/*" onchange="readURL(this,105+12)">
-          </div>
-          <div class="gal-item">
-            <img src="#" alt="" class="img"><br>
-            <button class="gal-edit-button">Edit</button> | <button class="gal-delete-button" onclick="remove(105+13)">Delete</button>
-            <input type="file" class="edit-gallery" accept="image/*" onchange="readURL(this,105+13)">
-          </div>
-          <div class="gal-item">
-            <img src="#" alt="" class="img"><br>
-            <button class="gal-edit-button">Edit</button> | <button class="gal-delete-button" onclick="remove(105+14)">Delete</button>
-            <input type="file" class="edit-gallery" accept="image/*" onchange="readURL(this,105+14)">
-          </div>
-        </div>
       </div>
+
+    <div class="edit-categories">
+      <div class="main-category">
+        <dl>
+          <dt>
+            <input type="checkbox" name="" #photo_editing (change)="togglePE($event)"> Graphic designing
+          </dt>
+          <dd>
+            <div class="sub-category" id="photo-editing-sub">
+              <input type="checkbox" name="" #photo_editing_1 [disabled]="pe">&nbsp;Photo editing<br>
+              <input type="checkbox" name="" [disabled]="pe">&nbsp;Illustration<br>
+              <input type="checkbox" name="" [disabled]="pe">&nbsp;Logo designing<br>
+              <input type="checkbox" name="" [disabled]="pe">&nbsp;Flyer design<br>
+              <input type="checkbox" name="" [disabled]="pe">&nbsp;Brochre design<br>
+              <input type="checkbox" name="" [disabled]="pe">&nbsp;Poster design<br>
+              <input type="checkbox" name="" [disabled]="pe">&nbsp;Catalog design<br>
+              <input type="checkbox" name="" [disabled]="pe">&nbsp;Menu design<br>
+              <input type="checkbox" name="" [disabled]="pe">&nbsp;Postcard design<br>
+              <input type="checkbox" name="" [disabled]="pe">&nbsp;Invitation design<br>
+              <input type="checkbox" name="" [disabled]="pe">&nbsp;Business card design
+            </div>
+          </dd>
+        </dl>
+      </div>
+
+      <div class="main-category">
+        <dl>
+          <dt>
+            <input type="checkbox" name="" id="video-editing" (change)="toggleVE($event)">&nbsp;3D modeling and architecture
+          </dt>
+          <dd>
+            <div class="sub-category" id="video-editing-sub">
+              <input type="checkbox" name="" id="video-editing-1" [disabled]="ve">&nbsp;Interior design<br>
+              <input type="checkbox" name="" id="video-editing-2" [disabled]="ve">&nbsp;Exterior design<br>
+              <input type="checkbox" name="" id="video-editing-3" [disabled]="ve">&nbsp;Product modeling<br>
+              <input type="checkbox" name="" id="video-editing-4" [disabled]="ve">&nbsp;CAD planing
+            </div>
+          </dd>
+        </dl>
+      </div>
+
+      <div class="main-category">
+        <dl>
+          <dt>
+            <input type="checkbox" name="" id="print-designs" (change)="togglePD($event)">&nbsp;Paintings
+          </dt>
+          <dd>
+            <div class="sub-category" id="print-designs-sub">
+              <input type="checkbox" name="" id="print-designs-1" [disabled] = "pd">&nbsp;Pencil & charcoal<br>
+              <input type="checkbox" name="" id="print-designs-2" [disabled] = "pd">&nbsp;Water colour<br>
+              <input type="checkbox" name="" id="print-designs-3" [disabled] = "pd">&nbsp;Acralic<br>
+              <input type="checkbox" name="" id="print-designs-4" [disabled] = "pd">&nbsp;Oil paint
+            </div>
+          </dd>
+        </dl>
+      </div>
+
+      <div class="main-category">
+        <dl>
+          <dt>
+            <input type="checkbox" name="" id="graphic-arts" (change)="toggleGA($event)">&nbsp;Photography
+          </dt>
+          <dd>
+            <div class="sub-category" id="graphic-arts-sub">
+              <input type="checkbox" name="" id="graphic-arts-1" [disabled] = "ga">&nbsp;Portrait photography<br>
+              <input type="checkbox" name="" id="graphic-arts-2" [disabled] = "ga">&nbsp;Aerial photography<br>
+              <input type="checkbox" name="" id="graphic-arts-3" [disabled] = "ga">&nbsp;Real estate photography<br>
+              <input type="checkbox" name="" id="graphic-arts-4" [disabled] = "ga">&nbsp;Events photography<br>
+              <input type="checkbox" name="" id="graphic-arts-5" [disabled] = "ga">&nbsp;Fashion photography<br>
+              <input type="checkbox" name="" id="graphic-arts-6" [disabled] = "ga">&nbsp;Product photography<br>
+              <input type="checkbox" name="" id="graphic-arts-7" [disabled] = "ga">&nbsp;Wild life photography<br>
+              <input type="checkbox" name="" id="graphic-arts-8" [disabled] = "ga">&nbsp;Life style photography<br>
+              <input type="checkbox" name="" id="graphic-arts-9" [disabled] = "ga">&nbsp;Art photography<br>
+              <input type="checkbox" name="" id="graphic-arts-10" [disabled] = "ga">&nbsp;Landscape photography<br>
+              <input type="checkbox" name="" id="graphic-arts-11" [disabled] = "ga">&nbsp;Natural life photography
+            </div>
+          </dd>
+        </dl>
+      </div>
+
+      <div class="main-category">
+        <dl>
+          <dt>
+            <input type="checkbox" name="" id="interior-design">&nbsp;Architecture and interior design
+          </dt>
+          <dd>
+            <div class="sub-category" id="interior-design-sub">
+            </div>
+          </dd>
+        </dl>
+      </div>
+    </div>
 
     <div class="container">
       <div class="row">

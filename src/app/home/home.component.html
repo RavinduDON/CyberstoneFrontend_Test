@@ -42,6 +42,15 @@
 <script src="../../assets/js/slick.min.js"></script>
 
 
+
+<!--contact js-->
+<script src="../../assets/js/contact.js"></script>
+<script src="../../assets/js/jquery.ajaxchimp.min.js"></script>
+<script src="../../assets/js/jquery.form.js"></script>
+<script src="../../assets/js/jquery.validate.min.js"></script>
+<script src="../../assets/js/mail-script.js"></script>
+
+
 <script src="../../assets/js/main.js"></script>
 <script src="../../assets/js/districts.js"></script>
 
@@ -128,65 +137,65 @@
 <div class="where_togo_area">
   <div class="container">
     <div class="row align-items-center">
-      <div class="col-lg-2">
-        <div class="text-light">
-          <h3 class="text-light">Here we go!</h3>
+      <div class="col-lg-3">
+        <div class="form_area">
+          <h3>Here we go!</h3>
         </div>
       </div>
-      <div class="col-lg-10">
-        <div class="">
-          <form class="row " action="#">
-            <div class="col-md-3 form-group">
-              <select class="form-control">
-                <option class="dropdown-item" data-display="All Category">All Catagory</option>
-                <option class="dropdown-item" value="1">Photo editing</option>
-                <option class="dropdown-item" value="2">Video editing</option>
-                <option class="dropdown-item" value="3">Logo designing</option>
-                <option class="dropdown-item" value="4">Architecture and interior design</option>
-                <option class="dropdown-item" value="5">Print designs</option>
-                <option class="dropdown-item" value="6">Graphic arts</option>
-                <option class="dropdown-item" value="7">Art & illustration</option>
-                <option class="dropdown-item" value="8">Photography</option>
+      <div class="col-lg-9">
+        <div class="search_wrap">
+          <form class="search_form" action="#">
+            <div class="input_field">
+              <select>
+                <option data-display="All Category">All Catagory</option>
+                <option value="1">Photo editing</option>
+                <option value="2">Video editing</option>
+                <option value="3">Logo designing</option>
+                <option value="4">Architecture and interior design</option>
+                <option value="5">Print designs</option>
+                <option value="6">Graphic arts</option>
+                <option value="7">Art & illustration</option>
+                <option value="8">Photography</option>
               </select>
             </div>
 
-            <div class="col-md-3 form-group">
-              <select class="form-control" id="district" onchange="">
+            <div class="input_field">
+              <select id="district" onchange="">
                 <option data-display="All Island">All Island</option>
-                <option class="dropdown-item" value="Ampara">Ampara</option>
-                <option class="dropdown-item" value="Anuradhapura">Anuradhapura</option>
-                <option class="dropdown-item" value="Badulla">Badulla</option>
-                <option class="dropdown-item" value="Batticaloa">Batticaloa</option>
-                <option class="dropdown-item" value="Colombo">Colombo</option>
-                <option class="dropdown-item" value="Galle">Galle</option>
-                <option class="dropdown-item" value="Gampaha">Gampaha</option>
-                <option class="dropdown-item" value="Hambantota">Hambantota</option>
-                <option class="dropdown-item" value="Jaffna">Jaffna</option>
-                <option class="dropdown-item" value="Kalutara">Kalutara</option>
-                <option class="dropdown-item" value="Kandy">Kandy</option>
-                <option class="dropdown-item" value="Kegalle">Kegalle</option>
-                <option class="dropdown-item" value="Kilinochchi">Kilinochchi</option>
-                <option class="dropdown-item" value="Kurunegala">Kurunegala</option>
-                <option class="dropdown-item" value="Mannar">Mannar</option>
-                <option class="dropdown-item" value="Matale">Matale</option>
-                <option class="dropdown-item" value="Matara">Matara</option>
-                <option class="dropdown-item" value="Moneragala">Moneragala</option>
-                <option class="dropdown-item" value="Mullaitivu">Mullaitivu</option>
-                <option class="dropdown-item" value="Nuwara Eliya">Nuwara Eliya</option>
-                <option class="dropdown-item" value="Polonnaruwa">Polonnaruwa</option>
-                <option class="dropdown-item" value="Puttalam">Puttalam</option>
-                <option class="dropdown-item" value="Ratnapura">Ratnapura</option>
-                <option class="dropdown-item" value="Trincomalee">Trincomalee</option>
-                <option class="dropdown-item" value="Vavuniya">Vavuniya</option>
+                <option value="Ampara">Ampara</option>
+                <option value="Anuradhapura">Anuradhapura</option>
+                <option value="Badulla">Badulla</option>
+                <option value="Batticaloa">Batticaloa</option>
+                <option value="Colombo">Colombo</option>
+                <option value="Galle">Galle</option>
+                <option value="Gampaha">Gampaha</option>
+                <option value="Hambantota">Hambantota</option>
+                <option value="Jaffna">Jaffna</option>
+                <option value="Kalutara">Kalutara</option>
+                <option value="Kandy">Kandy</option>
+                <option value="Kegalle">Kegalle</option>
+                <option value="Kilinochchi">Kilinochchi</option>
+                <option value="Kurunegala">Kurunegala</option>
+                <option value="Mannar">Mannar</option>
+                <option value="Matale">Matale</option>
+                <option value="Matara">Matara</option>
+                <option value="Moneragala">Moneragala</option>
+                <option value="Mullaitivu">Mullaitivu</option>
+                <option value="Nuwara Eliya">Nuwara Eliya</option>
+                <option value="Polonnaruwa">Polonnaruwa</option>
+                <option value="Puttalam">Puttalam</option>
+                <option value="Ratnapura">Ratnapura</option>
+                <option value="Trincomalee">Trincomalee</option>
+                <option value="Vavuniya">Vavuniya</option>
               </select>
             </div>
-            <div class="col-md-2 form-group">
-              <select class="form-control" id="towns">
-                <option class="dropdown-item" data-display="Town">Town</option>
+            <div class="input_field">
+              <select id="towns">
+                <option data-display="Town">Town</option>
               </select>
             </div>
-            <div class="col-md-2 form-group">
-              <button class="boxed-btn4 btn" type="submit" >Search</button>
+            <div class="search_btn">
+              <button class="boxed-btn4 " type="submit" >Search</button>
             </div>
           </form>
         </div>

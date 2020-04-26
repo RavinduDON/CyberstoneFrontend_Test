@@ -3066,6 +3066,18 @@ tr{
   margin-right: auto;
 }
 
+.like-btn{
+  border-width: 0;
+  padding:5px 20px;
+  color: white;
+  background-color: #3263AF;
+}
+
+.cover-photo{
+  height: 400px;
+  overflow: hidden;
+  align-content: center;
+}
 
 
 @media only screen and (max-width: 1200px) {

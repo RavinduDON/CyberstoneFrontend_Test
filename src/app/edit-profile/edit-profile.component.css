@@ -18,6 +18,15 @@ button{
   border-radius: 3px;
 
 }
+.cover-photo{
+  height: 400px;
+  overflow: hidden;
+  align-content: center;
+}
+
+.profile-photo{
+
+}
 
 .gal-item{
   position: relative;
@@ -2643,6 +2652,28 @@ tr{
   color: #444444;
 }
 
+.edit-categories{
+  position: relative;
+  width: 100%;
+  padding: 80px;
+  padding-left: 7%;
+  padding-right: 7%;
+  display: inline-table;
+}
+.main-category{
+  height: 280px;
+  position: relative;
+  padding-left: 10px;
+  padding-right: 10px;
+  float: left;
+}
+.sub-category{
+  padding-left: 30px;
+}
+.small-item{
+  height:25%;
+}
+
 /*--------------------------------- Responsive Media Quaries -----------------------------*/
 
 @media only screen and (min-width: 1430px) {
@@ -2986,6 +3017,10 @@ tr{
 /* Small Device = 320px */
 
 @media only screen and (max-width: 479px) {
+
+  .main-category{
+    height: auto;
+  }
 
   .studio-name{
     margin-top: 30px;

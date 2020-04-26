@@ -734,7 +734,6 @@ tr{
 .services-section .container {
   position: relative;
   margin-top: -90px;
-  z-index: 99;
 }
 
 .services-item {
@@ -3171,4 +3170,12 @@ tr{
     font-size: 36px;
     line-height: normal;
   }
+}
+
+.btn-edit{
+  margin-top: -30px;
+}
+.coverimg{
+  height: 500px;
+  width: 100%;
 }

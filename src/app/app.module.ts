@@ -16,6 +16,8 @@ import {HttpClientModule} from "@angular/common/http";
 import { CategoryComponent } from './category/category.component';
 import { ContactComponent } from './contact/contact.component';
 import {MaterialModule} from "./material/material.module";
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import {MaterialModule} from "./material/material.module";
     AboutComponent,
     TermsConditionsComponent,
     CategoryComponent,
-    ContactComponent
+    ContactComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

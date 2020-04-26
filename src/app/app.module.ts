@@ -15,12 +15,11 @@ import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { CategoryComponent } from './category/category.component';
 import { ContactComponent } from './contact/contact.component';
-<<<<<<< HEAD
+
 import {MaterialModule} from "./material/material.module";
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-=======
->>>>>>> ab50533a8d575dc05e4c893dfccf1e5348b5ea9c
+
 
 @NgModule({
   declarations: [
